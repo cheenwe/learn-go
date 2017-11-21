@@ -1,0 +1,28 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+*.aar
+
+# Folders
+_obj
+_test
+.idea
+.gradle
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+# Coverage files
+*.txt
+*.log
+*.out
