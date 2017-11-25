@@ -65,10 +65,18 @@ func deleteDirectory(dir string) {
 	_ = os.RemoveAll(dir)
 }
 
+// dir returns the directory for the current filename.
+func dir(name string) string {
+	return filepath.Dir(filepath.Base(name))
+}
+
 func main() {
 
 	file := "/Users/chenwei/workspace/go/learn/base/1/t12rr1qq112est111/a1.log"
 	file1 := "/Users/chenwei/workspace/go/learn/base/1/t12rr1qq112est111/a.log"
+	ff := dir(file)
+	fmt.Println(ff)
+
 	checkOrCreatePath(file)
 	checkOrCreateFile(file)
 	checkOrCreateFile(file1)
