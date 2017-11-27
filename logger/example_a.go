@@ -84,6 +84,7 @@ func ExampleLogger_ConnectionBased() {
 
 func main() {
 	ExampleLogger_ToConsole()
+	ExampleLogger_ToFile()
 	ExampleLogger_SwitchFile()
 	ExampleLogger_ConnectionBased()
 
