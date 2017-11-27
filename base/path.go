@@ -46,13 +46,10 @@ func checkOrCreateFile(name string) {
 	}
 }
 
+//isExists(filename)  判断文件是否存在
 func isExists(name string) bool {
-	if _, err := os.Stat(name); err != nil {
-		if os.IsNotExist(err) {
-			return false
-		}
-	}
-	return true
+	_, err := os.Stat(name)
+	return err == nil || os.IsExist(err)
 }
 
 func deleteAllFiles(dir string, files []string) {
@@ -72,8 +69,8 @@ func dir(name string) string {
 
 func main() {
 
-	file := "/Users/chenwei/workspace/go/learn/base/1/t12rr1qq112est111/a1.log"
-	file1 := "/Users/chenwei/workspace/go/learn/base/1/t12rr1qq112est111/a.log"
+	file := "/Users/chenwei/workspace/go/learn/base/1/t12rr1qq112est111/a11.log"
+	file1 := "/Users/chenwei/workspace/go/learn/base/1/t12rr1qq112est111/wa.log"
 	ff := dir(file)
 	fmt.Println(ff)
 
