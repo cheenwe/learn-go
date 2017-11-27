@@ -9,16 +9,17 @@ import (
 )
 
 const (
-	logInfoLabel  = "[info] "
-	logTraceLabel = "[trace] "
-	logWarnLabel  = "[warn] "
-	logErrorLabel = "[error] "
+	logInfoLabel  = "[INFO] "
+	logTraceLabel = "[TRACE] "
+	logWarnLabel  = "[WARN] "
+	logErrorLabel = "[ERROR] "
+	logFatalLabel = "[FATAL] "
 )
 
 type Context interface{}
 
 type cidContext interface {
-	Cid() int
+	Ccd id() int
 }
 
 type loggerPlus struct {
