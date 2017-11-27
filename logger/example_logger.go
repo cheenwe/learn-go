@@ -3,7 +3,7 @@ package logger_test
 import (
 	"os"
 
-	ol "github.com:cheenwe/learn_go/logger"
+	ol "github.com/cheenwe/learn_go/logger"
 )
 
 func ExampleLogger_ToConsole() {
